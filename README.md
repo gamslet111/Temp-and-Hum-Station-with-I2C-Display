@@ -1,20 +1,23 @@
 # ESP32 Temperature and Humidity Monitor
 
-![Front](Docs/Pictures/front.jpg)
-![Front](Docs/Pictures/back.jpg)
+![Front](Docs/Pictures/Front.JPG)
+![Back](Docs/Pictures/Back.JPG)
 
 ## Parts
 
-- ESP32 Dev Kit (e.g., AZ-Delivery DevKit V4) - [Link to ESP32]
-- DHT11 Sensor - [Link to DHT11]
-- 16x2 I2C LCD (Address 0x27) - [Link to I2C LCD]
-- Resistors and Wires - [Link to Resistors/Wires]
-- Breadboard - [Link to Breadboard]
-- Power Supply (5V) - [Link to Power Supply]
+-[ESP32 Dev Kit](https://de.aliexpress.com/item/1005008889403671.html?spm=a2g0o.productlist.main.1.11448Ncg8Ncgz1&algo_pvid=dc55a1c0-a7f9-4237-a7fb-2e6756b767f9&algo_exp_id=dc55a1c0-a7f9-4237-a7fb-2e6756b767f9-0&pdp_ext_f=%7B%22order%22%3A%22389%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%218.96%218.96%21%21%2171.51%2171.51%21%40211b61d017704992817237380e04b4%2112000047093672773%21sea%21AT%213185561340%21X%211%210%21n_tag%3A-29919%3Bd%3A7ed0a960%3Bm03_new_user%3A-29895&curPageLogUid=tXjPesefn7LA&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008889403671%7C_p_origin_prod%3A)
+
+-[DHT11 Sensor](https://de.aliexpress.com/item/1005008593539984.html?spm=a2g0o.productlist.main.7.6255qZx1qZx1Xh&algo_pvid=6c1c370a-4953-4688-9c9f-e21de472239b&algo_exp_id=6c1c370a-4953-4688-9c9f-e21de472239b-6&pdp_ext_f=%7B%22order%22%3A%22456%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%210.71%210.64%21%21%210.82%210.74%21%40211b612517704992244214531eb1f9%2112000048410393995%21sea%21AT%213185561340%21X%211%210%21n_tag%3A-29919%3Bd%3A7ed0a960%3Bm03_new_user%3A-29895&curPageLogUid=7IAPMfHh4HkV&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008593539984%7C_p_origin_prod%3A)
+
+-[16x2 I2C LCD](https://de.aliexpress.com/item/1005006076050544.html?spm=a2g0o.productlist.main.31.77ac194bfESgOu&algo_pvid=16a135ba-c62f-42c9-8392-cf8dc62ad03b&algo_exp_id=16a135ba-c62f-42c9-8392-cf8dc62ad03b-30&pdp_ext_f=%7B%22order%22%3A%22172%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%211.69%211.10%21%21%2113.51%218.78%21%40211b61a417704993146986869eb792%2112000035616675892%21sea%21AT%213185561340%21X%211%210%21n_tag%3A-29919%3Bd%3A7ed0a960%3Bm03_new_user%3A-29895&curPageLogUid=lYRSQMRNvGjz&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005006076050544%7C_p_origin_prod%3A)
+
+-[Conector for USB-C](https://de.aliexpress.com/item/1005006637640070.html?spm=a2g0o.order_list.order_list_main.111.15ee5c5fhmO5df&gatewayAdapt=glo2deu)
+
+-Wires
 
 ## 3D Prints
 
-Case and other 3D printed parts are located in `Docs/3D-Prints/`.
+Case and other 3D printed parts are located in [3D-Parts](https://github.com/gamslet111/Temp-and-Hum-Station-with-I2C-Display/tree/master/Docs/3D-Prints).
 
 ## Features
 - Reads temperature and humidity from DHT11 sensor.
