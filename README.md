@@ -1,6 +1,20 @@
 # ESP32 Temperature and Humidity Monitor
 
-This project uses an ESP32 microcontroller to read temperature and humidity data from a DHT11 sensor, display it on a 16x2 I2C LCD, and enter deep sleep for 60 seconds between measurements to conserve power.
+![Front](Docs/Pictures/front.jpg)
+![Front](Docs/Pictures/back.jpg)
+
+## Parts
+
+- ESP32 Dev Kit (e.g., AZ-Delivery DevKit V4) - [Link to ESP32]
+- DHT11 Sensor - [Link to DHT11]
+- 16x2 I2C LCD (Address 0x27) - [Link to I2C LCD]
+- Resistors and Wires - [Link to Resistors/Wires]
+- Breadboard - [Link to Breadboard]
+- Power Supply (5V) - [Link to Power Supply]
+
+## 3D Prints
+
+Case and other 3D printed parts are located in `Docs/3D-Prints/`.
 
 ## Features
 - Reads temperature and humidity from DHT11 sensor.
