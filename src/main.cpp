@@ -23,15 +23,9 @@ void loop() {
   float hum = dht.readHumidity();
 
   if (isnan(temp) || isnan(hum)) {
-    Serial.println("Fehler beim Lesen des DHT-Sensors!");
+    Serial.println("Failure with DHT11!");
     return;
   }
-
-  Serial.print("Temperatur: ");
-  Serial.print(temp);
-  Serial.print(" °C, Feuchtigkeit: ");
-  Serial.print(hum);
-  Serial.println(" %");
 
   lcd.clear();
   lcd.setCursor(0, 0);

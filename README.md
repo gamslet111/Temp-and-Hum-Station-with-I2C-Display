@@ -14,6 +14,19 @@ This project uses an ESP32 microcontroller to read temperature and humidity data
 - 16x2 I2C LCD connected to SDA (GPIO 21) and SCL (GPIO 22).
 - Power supply: 5V via VIN pin or USB.
 
+## Wiring
+- **DHT11 Sensor**:
+  - Data pin → GPIO 4 (ESP32)
+  - VCC → 3.3V (ESP32)
+  - GND → GND (ESP32)
+- **16x2 I2C LCD**:
+  - SDA → GPIO 21 (ESP32)
+  - SCL → GPIO 22 (ESP32)
+  - VCC → 3.3V (ESP32)
+  - GND → GND (ESP32)
+- **ESP32 Power Supply**:
+  - Connect 5V from a lab power supply to VIN pin (ESP32) for external power.
+
 ## Software Requirements
 - PlatformIO with Arduino framework.
 - Libraries: DHT sensor library, LiquidCrystal_I2C.
@@ -26,4 +39,3 @@ This project uses an ESP32 microcontroller to read temperature and humidity data
 
 ## Usage
 The ESP32 wakes up every 60 seconds, measures data, displays it on the LCD, and sleeps again.
-
