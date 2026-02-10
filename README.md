@@ -19,9 +19,17 @@
 
 Case and other 3D printed parts are located in [3D-Parts](https://github.com/gamslet111/Temp-and-Hum-Station-with-I2C-Display/tree/master/Docs/3D-Prints).
 
+## Code Versions
+
+This project provides two code versions:
+
+- **Without WiFi**: Basic version that reads sensor data, displays it on the LCD, and enters deep sleep. No internet connection required. Use `main.cpp`.
+- **With WiFi**: Advanced version that includes WiFi connectivity and sends data to Firebase Realtime Database for remote monitoring. Requires WiFi and Firebase setup. Use `With Wifi.cpp` (rename to `main.cpp` in PlatformIO if needed).
+
 ## Features
 - Reads temperature and humidity from DHT11 sensor.
 - Displays data on a 16x2 I2C LCD (address 0x27).
+- (WiFi version only) Sends data to Firebase Realtime Database for remote monitoring.
 - Enters deep sleep mode for 60 seconds after each measurement.
 - Outputs data to serial monitor for debugging.
 
@@ -30,6 +38,7 @@ Case and other 3D printed parts are located in [3D-Parts](https://github.com/gam
 - DHT11 sensor connected to GPIO 4.
 - 16x2 I2C LCD connected to SDA (GPIO 21) and SCL (GPIO 22).
 - Power supply: 5V via VIN pin or USB.
+- (WiFi version only) WiFi network and Firebase account.
 
 ## Wiring
 - **DHT11 Sensor**:
@@ -47,12 +56,25 @@ Case and other 3D printed parts are located in [3D-Parts](https://github.com/gam
 ## Software Requirements
 - PlatformIO with Arduino framework.
 - Libraries: DHT sensor library, LiquidCrystal_I2C.
+- (WiFi version only) Firebase ESP32 Client library, Firebase account.
 
-## Setup
+## Setup Instructions for Both Versions
+
+### Version Without WiFi
 1. Clone the repository.
-2. Open in PlatformIO.
+2. Open `main.cpp` in PlatformIO (ensure it's the basic version without WiFi code).
 3. Upload the code to the ESP32.
 4. Monitor serial output for data.
+5. The ESP32 will wake up every 60 seconds, measure data, display it on the LCD, and sleep again.
+
+### Version With WiFi
+1. Clone the repository.
+2. Create a Firebase project at firebase.google.com and get your host URL and auth key.
+3. Create a `config.h` file in `src/` with your WiFi SSID, password, Firebase host, and auth key (see example in config.h).
+4. Open `With Wifi.cpp` in PlatformIO (rename it to `main.cpp` if needed for compilation).
+5. Upload the code to the ESP32.
+6. Monitor serial output for data and Firebase connection.
+7. The ESP32 will connect to WiFi, send data to Firebase, display on LCD, and sleep every 60 seconds.
 
 ## Usage
-The ESP32 wakes up every 60 seconds, measures data, displays it on the LCD, and sleeps again.
+The ESP32 wakes up every 60 seconds, measures data, displays it on the LCD, (if WiFi version) sends it to Firebase, and sleeps again.
