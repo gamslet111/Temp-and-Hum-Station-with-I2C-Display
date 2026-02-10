@@ -33,13 +33,6 @@ This project provides two code versions:
 - Waits 60 seconds between measurements.
 - Outputs data to serial monitor for debugging.
 
-## Hardware Requirements
-- ESP32 Dev Kit (e.g., AZ-Delivery DevKit V4).
-- DHT11 sensor connected to GPIO 4.
-- 16x2 I2C LCD connected to SDA (GPIO 21) and SCL (GPIO 22).
-- Power supply: 5V via VIN pin or USB.
-- (WiFi version only) WiFi network and Firebase account.
-
 ## Wiring
 - **DHT11 Sensor**:
   - Data pin → GPIO 4 (ESP32)
