@@ -4,7 +4,6 @@
 
 #define DHTPIN 4
 #define DHTTYPE DHT11
-#define SLEEP_TIME 60 * 1000000ULL
 
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 DHT dht(DHTPIN, DHTTYPE);
@@ -33,6 +32,5 @@ void loop() {
   lcd.setCursor(0, 1);
   lcd.printf("Hume: %.1f %%", hum);
 
-  esp_sleep_enable_timer_wakeup(SLEEP_TIME);
-  esp_deep_sleep_start();
+  delay(60000);
 }

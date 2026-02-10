@@ -23,14 +23,14 @@ Case and other 3D printed parts are located in [3D-Parts](https://github.com/gam
 
 This project provides two code versions:
 
-- **Without WiFi**: Basic version that reads sensor data, displays it on the LCD, and enters deep sleep. No internet connection required. Use `main.cpp`.
+- **Without WiFi**: Basic version that reads sensor data, displays it on the LCD, and waits 60 seconds before the next measurement. No internet connection required. Use `Without Wifi.cpp`.
 - **With WiFi**: Advanced version that includes WiFi connectivity and sends data to Firebase Realtime Database for remote monitoring. Requires WiFi and Firebase setup. Use `With Wifi.cpp` (rename to `main.cpp` in PlatformIO if needed).
 
 ## Features
 - Reads temperature and humidity from DHT11 sensor.
 - Displays data on a 16x2 I2C LCD (address 0x27).
 - (WiFi version only) Sends data to Firebase Realtime Database for remote monitoring.
-- Enters deep sleep mode for 60 seconds after each measurement.
+- Waits 60 seconds between measurements.
 - Outputs data to serial monitor for debugging.
 
 ## Hardware Requirements
@@ -62,10 +62,10 @@ This project provides two code versions:
 
 ### Version Without WiFi
 1. Clone the repository.
-2. Open `main.cpp` in PlatformIO (ensure it's the basic version without WiFi code).
+2. Open `Without Wifi.cpp` in PlatformIO (ensure it's the basic version without WiFi code).
 3. Upload the code to the ESP32.
 4. Monitor serial output for data.
-5. The ESP32 will wake up every 60 seconds, measure data, display it on the LCD, and sleep again.
+5. The ESP32 will measure data every 60 seconds, display it on the LCD, and continue running.
 
 ### Version With WiFi
 1. Clone the repository.
@@ -74,7 +74,7 @@ This project provides two code versions:
 4. Open `With Wifi.cpp` in PlatformIO (rename it to `main.cpp` if needed for compilation).
 5. Upload the code to the ESP32.
 6. Monitor serial output for data and Firebase connection.
-7. The ESP32 will connect to WiFi, send data to Firebase, display on LCD, and sleep every 60 seconds.
+7. The ESP32 will connect to WiFi, send data to Firebase, display on LCD, and measure every 60 seconds.
 
 ## Usage
-The ESP32 wakes up every 60 seconds, measures data, displays it on the LCD, (if WiFi version) sends it to Firebase, and sleeps again.
+The ESP32 measures data every 60 seconds, displays it on the LCD, (if WiFi version) sends it to Firebase, and continues running.

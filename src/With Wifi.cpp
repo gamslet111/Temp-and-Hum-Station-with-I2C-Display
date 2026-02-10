@@ -10,7 +10,6 @@
 // Pins and configuration
 #define DHTPIN 4
 #define DHTTYPE DHT11
-#define SLEEP_TIME 60 * 1000000ULL
 DHT dht(DHTPIN, DHTTYPE);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
@@ -55,7 +54,7 @@ void loop() {
   lcd.setCursor(0, 0);
   lcd.printf("Temp: %.1f C", temp);
   lcd.setCursor(0, 1);
-  lcd.printf("Hum: %.1f %%", hum);
+  lcd.printf("Hume: %.1f %%", hum);
 
   // Send to Firebase
   if (Firebase.setFloat(firebaseData, "/sensor/temp", temp) &&
@@ -65,7 +64,5 @@ void loop() {
     Serial.println("Error sending: " + firebaseData.errorReason());
   }
 
-  // Deep Sleep
-  esp_sleep_enable_timer_wakeup(SLEEP_TIME);
-  esp_deep_sleep_start();
+  delay(60000);
 }

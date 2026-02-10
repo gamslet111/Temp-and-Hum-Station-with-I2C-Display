@@ -1,8 +1,6 @@
 # PlatformIO build files
 .pio
 
-# Sensitive files containing WiFi, Firebase, and other credentials
-config.h
 secrets.h
 *.key
 *.pem
